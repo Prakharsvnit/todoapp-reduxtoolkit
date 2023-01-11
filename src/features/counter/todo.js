@@ -13,7 +13,7 @@ const Todo = () => {
   return (
     <>
       <input type="text" value={todo} onChange={handleChange} />
-      <button type="button" onClick={() => dispatch(addTodos)}>
+      <button type="button" onClick={() => dispatch(addTodos(todo))}>
         Add
       </button>
     </>
@@ -21,3 +21,7 @@ const Todo = () => {
 };
 
 export default Todo;
+
+// addTodos is action and payload is the text typed in
+// input box (which is called todo here).
+// Syntax given in line 16.
